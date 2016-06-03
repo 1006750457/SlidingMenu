@@ -1,7 +1,7 @@
 package com.example.user.slidingmenu;
 
 /**
- * Created by user on 2016/2/19.
+ * Created by liuwei on 2016/6/3.
  */
 public class ContentItem {
     private int resId;

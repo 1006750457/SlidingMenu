@@ -107,6 +107,8 @@ public class SlidingMenu extends ViewGroup {
         return intercept;
     }
 
+
+	@SuppressLint("ClickableViewAccessibility")
 	@Override
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
@@ -156,12 +158,12 @@ public class SlidingMenu extends ViewGroup {
 
             case MotionEvent.ACTION_UP:
                 if (getScrollX() < -mMenuWidth / 2){//打开Menu
-                    //调用startScroll方法，第�?个参数是起始X坐标，第二个参数
-                    //是起始Y坐标，第三个参数是X方向偏移量，第四个参数是Y方向偏移�?
+                    //调用startScroll方法，第一个参数是起始X坐标，第二个参数
+                    //是起始Y坐标，第三个参数是X方向偏移量，第四个参数是Y方向偏移量
                     mScroller.startScroll(getScrollX(), 0, -mMenuWidth - getScrollX(), 0, 300);
-                    //设置�?个已经打�?的标识，当实现点击开关自动打�?关闭功能时会用到
+                    //设置一个已经打开的标识，当实现点击开关自动打开关闭功能时会用到
                     isOpen = true;
-                    //�?定不要忘了调用这个方法重绘，否则没有动画效果
+                    //一定不要忘了调用这个方法重绘，否则没有动画效果
                     invalidate();
                 }else{//关闭Menu
                     //同上

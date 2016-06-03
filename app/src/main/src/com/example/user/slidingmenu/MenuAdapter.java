@@ -11,14 +11,12 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by user on 2016/2/19.
+ * Created by liuwei on 2016/6/3.
  */
 public class MenuAdapter extends BaseAdapter {
-    private Context mContext;
     private List<MenuItem> mDatas;
     private LayoutInflater mInflater;
     public MenuAdapter(Context context , List<MenuItem> datas){
-        mContext = context;
         mInflater = LayoutInflater.from(context);
         mDatas = datas;
     }

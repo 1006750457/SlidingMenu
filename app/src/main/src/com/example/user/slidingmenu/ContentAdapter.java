@@ -11,14 +11,12 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by user on 2016/2/19.
+ * Created by liuwei on 2016/2/19.
  */
 public class ContentAdapter extends BaseAdapter {
-    private Context mContext;
     private List<ContentItem> mDatas;
     private LayoutInflater mInflater;
     public ContentAdapter(Context context, List<ContentItem> datas){
-        mContext = context;
         mInflater = LayoutInflater.from(context);
         mDatas = datas;
     }
@@ -54,7 +52,7 @@ public class ContentAdapter extends BaseAdapter {
         viewHolder.mTextView.setText(contentItem.getName());
         return convertView;
     }
-    private static class ViewHolder{
+     static class ViewHolder{
         ImageView mImageView;
         TextView mTextView;
     }
